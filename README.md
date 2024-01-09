@@ -1,5 +1,7 @@
 # openai-whisper-example
 
-STEPS TO USE PROJECT
+USE NPM INSTALL 
 
-1. 
+IMPORT POSTMAN COLLECTION AND USE IT 
+
+⚡⚡⚡⚡⚡⚡
