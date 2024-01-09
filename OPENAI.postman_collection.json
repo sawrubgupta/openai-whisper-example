@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "f4332823-4067-4685-9653-ffedf116ca72",
+		"name": "OPENAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4575292",
+		"_collection_link": "https://planetary-shuttle-990522.postman.co/workspace/Team-Workspace~0f9e7080-622e-46e1-8e75-48cc7270b969/collection/4575292-f4332823-4067-4685-9653-ffedf116ca72?action=share&source=collection_link&creator=4575292"
+	},
+	"item": [
+		{
+			"name": "AUDIO TO TEXT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Saurabh/Desktop/New folder/audio.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/api/transcribe",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transcribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
