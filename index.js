@@ -11,9 +11,8 @@ import OpenAI from 'openai';
 
 
 const upload = multer();
-
-
 const app = express();
+
 
 app.use(express.json());
 
@@ -21,39 +20,6 @@ app.use(express.json());
 const apiKey = config.OPEN_AI_API_KEY;
 
 
-const openai = new OpenAI({
-    apiKey: apiKey, // defaults to process.env["OPENAI_API_KEY"]
-  });
-
-
-app.get('/audioToText', async (req, res) => {
-
-    try{
-        const fileAudio = fs.readFileSync('example.mp3');
-       // const base64Audio = fileAudio.toString('base64');
-
-        const chatCompletion = await openai.audio.transcriptions.create({
-            model: 'whisper-1',
-            file: fileAudio
-        })
-    
-     //   console.log(chatCompletion, "chatCompletion");
-    
-      //  console.log(JSON.stringify(chatCompletion), "chatCompletion");
-    
-        res.send(chatCompletion);
-
-
-    }catch(e){
-        console.log("ERROR", e);
-        res.send("Something went wrong");
-    }
-
-    //read audio file
-
-
-}
-);
 
 
 const  bufferToStream  = (buffer) => {
